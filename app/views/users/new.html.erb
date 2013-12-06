@@ -1,23 +1,21 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
-<h2>Create your account here!</h2>
+<h1>Create your account here!</h1>
 
-<%= form_tag '' do %>
+<%= form_for @user do |f| %>
   <div>
-    <%= label_tag 'name' %><br>
-    <%= text_field_tag 'name' %>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
   </div>
   <div>
-    <%= label_tag 'email' %><br>
-    <%= email_field_tag 'email' %>
+    <%= f.label :email %><br>
+    <%= f.email_field :email %>
   </div>
   <div>
-    <%= label_tag 'password' %><br>
-    <%= password_field_tag 'password' %>
+    <%= f.label :password %><br>
+    <%= f.password_field :password %>
   </div>
   <div>
-    <%= label_tag 'password_confirmation'  %><br>
-    <%= password_field_tag 'password_confirmation' %>
+    <%= f.label :password_confirmation  %><br>
+    <%= f.password_field :password_confirmation %>
   </div>
   <%= submit_tag 'Create My Account Already!' %>
 <% end %>
